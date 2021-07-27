@@ -10,10 +10,9 @@ import {
     CloseQuote,
     Slogan,
     AboutP,
-    Image,
-    BtnWrapper,
-    KnowMoreBtn
+    Image
 } from './AboutElements'
+import Button from '../Button';
 
 const About = () => {
     return (
@@ -34,9 +33,7 @@ const About = () => {
             <AboutRight>
                 <Image src={ image }/>
             </AboutRight>
-            <BtnWrapper>
-                <KnowMoreBtn>Know More</KnowMoreBtn>
-            </BtnWrapper>
+            <Button text={ "Know More" }/>
         </AboutContainer>
     )
 }
