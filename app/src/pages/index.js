@@ -4,6 +4,7 @@ import Sidebar from '../components/Sidebar';
 import HeroSection from '../components/HeroSection';
 import About from '../components/About';
 import Store from '../components/Store';
+import News from '../components/News';
 
 const Home = () => {
 
@@ -20,6 +21,7 @@ const Home = () => {
             <HeroSection />
             <About />
             <Store />
+            <News />
         </>
     )
 }

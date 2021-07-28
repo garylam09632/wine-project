@@ -48,15 +48,16 @@ export const Btn = styled.a`
 
     @media screen and (max-width: 1500px) {
         height: 27px;
+        font-size: 1.4vw;
     }
 
     @media screen and (max-width: 1300px) {
-        height: 22px;
+        height: 23px;
         font-size: 1.5vw;
     }
 
     @media screen and (max-width: 1100px) {
-        height: 20px;
+        height: 25px;
         font-size: 1.7vw;
     }
 
