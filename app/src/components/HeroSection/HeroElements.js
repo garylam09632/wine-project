@@ -1,4 +1,11 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const fadeIn = keyframes`
+    0% {opacity: 0.5;}
+    30% {opacity: 1;}
+    96% {opacity: 1;}
+    100% {opacity: 0.6;}
+`;
 
 export const HeroContainer = styled.div`
     background: #0c0c0c;
@@ -9,6 +16,7 @@ export const HeroContainer = styled.div`
     height: 800px;
     position: relative;
     z-index: 1;
+    background-color: #fff;
 
     @media screen and (max-width: 768px) {
         height: 650px;
@@ -37,6 +45,7 @@ export const ImageBg = styled.img`
     object-fit: cover;
     border: none;
     background: #232a34;
+    animation: ${fadeIn} ease 10s infinite;
 `;
 
 export const HeroContent = styled.div`

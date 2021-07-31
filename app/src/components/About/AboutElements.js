@@ -5,7 +5,7 @@ export const AboutContainer = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0px;
+    padding: 0px 0px 30px 0px;
     height: 700px;
     position: relative;
     flex-wrap: wrap;
@@ -109,6 +109,7 @@ export const CloseQuote = styled.div`
     font-style: italic;
     text-align: right;
     margin-top: 3%;
+    margin-bottom: 5%;
 
     @media screen and (max-width: 1500px) {
         font-size: 1.3vw;
@@ -138,7 +139,7 @@ export const Slogan = styled.div`
 `;
 
 export const AboutP = styled.p`
-    font-family: 'Varela', serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
     font-size: 1.2rem;
 

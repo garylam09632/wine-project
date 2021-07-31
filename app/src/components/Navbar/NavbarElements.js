@@ -72,6 +72,7 @@ export const NavMenu = styled.ul`
     align-items: center;
     list-style: none;
     text-align: center;
+    margin-bottom: 0px;
     transition: 0.2s ease-in-out;
 
     @media screen and (max-width: 768px) {
@@ -103,6 +104,6 @@ export const NavLinks = styled(LinkScroll)`
 
     &:hover {
         color: #8B9192;
-        transition: 0.4s ease-in-out;
+        transition: 0.2s ease-in-out;
     }
 `

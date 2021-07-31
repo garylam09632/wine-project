@@ -12,7 +12,7 @@ import {
 const SingleNews = ({ imageToLeft }) => {
     if (imageToLeft) {
         return (
-            <SingleNewsContainer>
+            <SingleNewsContainer className="hideMe">
                 <ImgContainer>
                     <Image src={ wine } />
                 </ImgContainer>
@@ -28,7 +28,7 @@ const SingleNews = ({ imageToLeft }) => {
     }
     else {
         return (
-            <SingleNewsContainer>
+            <SingleNewsContainer className="hideMe">
                 <NewsContentContainer>
                     <SingleNewTitle>Topic 2</SingleNewTitle>
                     <SingleNewContent>Mauris eros orci, blandit a porta eu, sagittis ac nulla. 

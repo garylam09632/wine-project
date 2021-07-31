@@ -6,14 +6,14 @@ export const BtnWrapper = styled.div`
     justify-content: center;
 
     @media screen and (max-width: 768px) {
-        width: 70%;
+        width: 100%;
     }
 `;
 
 export const Btn = styled.a` 
     display: flex;
     margin: 0px;
-    height: 33px;
+    height: 34px;
     text-decoration: none;
     color: #fff;
     cursor: pointer;
@@ -31,19 +31,24 @@ export const Btn = styled.a`
         right: 0;
         width: 0;
         height: 2px;
-        background-color: #8B9192;
+        background-color: ${ props => props.hoverColor };
         transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
     }
 
     &:hover {
-        color: #8B9192;
-        transition: 0.3s ease-in-out;
+        color: ${ props => props.hoverColor };
+        transition: 0.2s ease-in-out;
     }
 
     &:hover::before {
         left: 0;
         right: auto;
         width: 100%;
+    }
+
+    @media screen and (max-width: 1700px) {
+        height: 32px;
+        font-size: 1.4vw;
     }
 
     @media screen and (max-width: 1500px) {

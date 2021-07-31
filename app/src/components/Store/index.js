@@ -35,8 +35,8 @@ const Store = () => {
 
     return (
         <StoreContainer>
-            <StoreTitle>OUR WINES</StoreTitle>
-            <ProductsContainer>
+            <StoreTitle className="hideMe">OUR WINES</StoreTitle>
+            <ProductsContainer className="hideMe">
                 <Product data={p1} />
                 <Product data={p2} />
                 <Product data={p3} />

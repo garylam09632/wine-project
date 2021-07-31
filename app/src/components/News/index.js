@@ -6,7 +6,7 @@ import Button from '../Button';
 const News = () => {
     return (
         <NewsContainer>
-            <NewsSectionTitle>SOME NEWS FROM US...</NewsSectionTitle>
+            <NewsSectionTitle className="hideMe">SOME NEWS FROM US...</NewsSectionTitle>
             <SingleNews imageToLeft={ true } />
             <SeparateLine />
             <SingleNews imageToLeft={ false } />

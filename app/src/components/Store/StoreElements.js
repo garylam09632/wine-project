@@ -3,10 +3,10 @@ import styled from 'styled-components';
 export const StoreContainer = styled.div`
     background: #242424;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding: 0px;
-    height: 700px;
+    padding: 30px 0px 0px 0px;
+    height: 800px;
     position: relative;
     flex-wrap: wrap;
     flex-direction: row;
@@ -22,7 +22,7 @@ export const StoreTitle = styled.h1`
     color: #fff;
     font-family: 'Encode Sans SC', sans-serif;
     font-size: 40px;
-    transition: 0.3s ease-in-out；
+    transition: 0.3s ease-in-out;
 
     @media screen and (max-width: 768px) {
         font-size: 32px;

@@ -124,8 +124,13 @@ export const SingleNewTitle = styled.a`
     cursor: pointer;
     width: 100%;
     max-width: 75%;
+    margin-bottom: 5px;
     color: #fff;
     transition: 0.3s ease-in-out;
+
+    &:hover {
+        color: #848787;
+    }
 
     @media screen and (max-width: 1500px) {
         font-size: 1.5vw;
@@ -146,7 +151,7 @@ export const SingleNewTitle = styled.a`
 `;
 
 export const SingleNewContent = styled.p`
-    font-family: 'Varela', serif;
+    font-family: 'Josefin Sans', sans-serif;
     max-width: 75%;
     font-weight: 400;
     font-size: 1rem;

@@ -18,7 +18,7 @@ const About = () => {
     return (
         <AboutContainer>
             <AboutLeft>
-                <AboutWrapper>
+                <AboutWrapper className="hideMe">
                     <AboutTitle>Sample About Title</AboutTitle>
                     <OpenQuote>“</OpenQuote>
                     <Slogan>Lorem ipsum dolor sit amet, consectetu adipiscing </Slogan>
@@ -30,7 +30,7 @@ const About = () => {
                     </AboutP>
                 </AboutWrapper>
             </AboutLeft>
-            <AboutRight>
+            <AboutRight className="hideMe">
                 <Image src={ image }/>
             </AboutRight>
             <Button text={ "Know More" }/>
