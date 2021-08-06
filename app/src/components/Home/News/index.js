@@ -1,7 +1,7 @@
 import React from 'react';
 import { NewsContainer, NewsSectionTitle, SeparateLine } from './NewsElements';
 import SingleNews from './SingleNews';
-import Button from '../Button';
+import Button from '../../Button';
 
 const News = () => {
     return (

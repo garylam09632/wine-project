@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import Navbar from '../components/Navbar';
-import Sidebar from '../components/Sidebar';
-import HeroSection from '../components/HeroSection';
-import About from '../components/About';
-import Store from '../components/Store';
-import News from '../components/News';
+import HeroSection from '../components/Home/HeroSection';
+import About from '../components/Home/About';
+import Store from '../components/Home/Store';
+import News from '../components/Home/News';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
@@ -57,14 +55,11 @@ class Home extends Component {
     render() {
         return (
             <>
-                <Sidebar isOpen={this.state.isOpen} toggle={this.toggle} />
-                <Navbar toggle={this.toggle} />
                 <HeroSection />
                 <About />
                 <Store />
                 <News />
                 <Contact />
-                <Footer />
             </>
         )
     }

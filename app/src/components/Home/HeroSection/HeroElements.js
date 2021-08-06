@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
 const fadeIn = keyframes`
-    0% {opacity: 0.5;}
+    0% {opacity: 0.1;}
     30% {opacity: 1;}
     96% {opacity: 1;}
     100% {opacity: 0.6;}
@@ -10,7 +10,7 @@ const fadeIn = keyframes`
 export const HeroContainer = styled.div`
     background: #0c0c0c;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
     padding: 0 30px;
     height: 800px;

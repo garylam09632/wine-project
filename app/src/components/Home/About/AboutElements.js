@@ -27,7 +27,8 @@ export const AboutContainer = styled.div`
     }
 
     @media screen and (max-width: 768px) {
-        height: 700px;
+        padding: 50px 0px;
+        height: auto;
         flex-flow: row wrap;
         justify-content: center;
     }
@@ -54,6 +55,7 @@ export const AboutLeft = styled.div`
         width: 75%;
         height: 35%;
         align-items: flex-end;
+        margin-bottom: 20px;
     }
 `;
 
@@ -68,6 +70,7 @@ export const AboutRight = styled.div`
     @media screen and (max-width: 768px) {
         width: 70%;
         height: 50%;
+        margin-bottom: 30px;
     }
 `;
 

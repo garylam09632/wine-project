@@ -1,16 +1,13 @@
 import styled from 'styled-components';
 
 export const ProductContainer = styled.div`
-    display: flex;
     width: 20%;
     background-color: #d6d4d5;
-    height: 500px;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
+    height: 100%;
+    display: flex;
     transition: 0.2s ease-in-out;
     cursor: pointer;
-    margin: 0px 50px 100px 50px;
+    position: relative;
 
     &:hover {
         box-shadow: 1px 5px 10px #555859;
@@ -41,6 +38,16 @@ export const ProductContainer = styled.div`
     }
 `;
 
+export const ContentContainer = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    visibility: ${ props => props.display ? "hidden" : "visible" };
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+`;
+
 export const WineImg = styled.img`
     padding-top: 10px;
     width: 65%;
@@ -60,4 +67,13 @@ export const WineContent = styled.p`
 export const WineText = styled.p`
     margin-top: 0px;
     margin-bottom: 5px;
+`;
+
+export const HoverElementContainer = styled.div`
+    display: ${ props => props.display ? "block" : "none" };
+    visibility: ${ props => props.display ? "visible" : "hidden" };
+`;
+
+export const HoverText = styled.p`
+
 `;

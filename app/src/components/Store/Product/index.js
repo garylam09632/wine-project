@@ -12,8 +12,8 @@ const Product = ({ data }) => {
         <ProductContainer>
             <WineImg src={ data.image } />
             <WineContent>
-                <WineText>{ data.name } <span><b><i>({ data.year })</i></b></span></WineText>
-                <WineText>${ data.price }</WineText>
+                <WineText><b>{ data.collection }</b></WineText>
+                <WineText>{ data.name } { data.year }</WineText>
             </WineContent>
         </ProductContainer>
     )

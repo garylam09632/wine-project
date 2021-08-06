@@ -7,7 +7,7 @@ import {
     TextareaRow,
     ContactTextarea
 } from './ContactElements'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import Button from '../Button/index';
 import Input from '../Input/index';
 

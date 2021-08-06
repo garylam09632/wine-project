@@ -1,6 +1,6 @@
 import { React, Component } from 'react';
-import hill from '../../images/adelaide_hills.jpg';
-import hill2 from '../../images/adelaide_hills_2.jpg';
+import hill from '../../../images/adelaide_hills.jpg';
+import hill2 from '../../../images/adelaide_hills_2.jpg';
 import { 
     HeroContainer, 
     HeroBg, 

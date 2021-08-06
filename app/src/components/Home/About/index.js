@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../../images/wine_01.jpg';
+import image from '../../../images/wine_01.jpg';
 import {
     AboutContainer,
     AboutWrapper,
@@ -12,7 +12,7 @@ import {
     AboutP,
     Image
 } from './AboutElements'
-import Button from '../Button';
+import Button from '../../Button';
 
 const About = () => {
     return (

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const BtnWrapper = styled.div`
     display: flex;
@@ -10,7 +11,7 @@ export const BtnWrapper = styled.div`
     }
 `;
 
-export const Btn = styled.a` 
+export const Btn = styled(Link)` 
     display: flex;
     margin: 0px;
     height: 34px;

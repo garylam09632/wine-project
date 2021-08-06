@@ -1,5 +1,5 @@
 import React from 'react';
-import wine from '../../images/wine.jpg';
+import wine from '../../../images/wine.jpg';
 import {
     SingleNewsContainer,
     ImgContainer,
