@@ -16,6 +16,39 @@ class App extends Component {
         }
     }
 
+	elementFadeIn = () => {
+		document.addEventListener('scroll', function(e) {
+            var supportPageOffset = window.pageXOffset !== undefined;
+            var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+            var scrollTop = supportPageOffset ? window.pageYOffset : isCSS1Compat ? 
+                                    document.documentElement.scrollTop : document.body.scrollTop;
+            // console.log(scrollTop + ", " + window.innerHeight);
+            var containers = document.getElementsByClassName("hideMe");
+            var i = 0;
+            for (var container of containers) {
+                console.log(scrollTop);
+                // var supportPageOffset = window.pageXOffset !== undefined;
+                // var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+                // var scrollTop = supportPageOffset ? window.pageYOffset : isCSS1Compat ? 
+                //                     document.documentElement.scrollTop : document.body.scrollTop;
+
+                let eTop = container.getBoundingClientRect().top + scrollTop;
+                let viewportBottom = scrollTop + window.innerHeight;
+                console.log(i + ". " + eTop + ", " + viewportBottom)
+                
+                /* If the object is completely visible in the window, fade it it */
+                if(viewportBottom > eTop + 150){
+                    container.animate({'opacity':'1'}, {
+                        duration: 2500,
+                        fill: 'forwards'
+                    });
+                }
+
+                i++;
+            }
+        });
+	}
+
     toggle = () => {
         this.setState({ isOpen: !this.state.isOpen });
     }
@@ -29,10 +62,10 @@ class App extends Component {
 
 					<Switch>
 						<Route path="/store">
-							<Store />
+							<Store fadeInFunction={ this.elementFadeIn } />
 						</Route>
 						<Route path="/">
-							<Home />
+							<Home fadeInFunction={ this.elementFadeIn } />
 						</Route>
 					</Switch>
 					<Footer />

@@ -43,6 +43,7 @@ export const ProductsContainer = styled.div`
     position: relative;
     flex-wrap: wrap;
     flex-direction: row;
+    transition: all 0.2s ease-in-out;
 
     @media screen and (max-width: 1000px) {
         padding: 0px 30%;

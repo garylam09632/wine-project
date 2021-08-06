@@ -6,28 +6,27 @@ import {
     WineContent,
     WineText,
     HoverElementContainer,
+    HoverContent,
+    HoverIcon,
     HoverText
 } from './ProductElements';
 
 const Product = ({ data }) => {
 
-    const [isHover, setIsHover] = useState(false);
-
-    const toggle = () => {
-        setIsHover(!isHover);
-    }
-
     return (
-        <ProductContainer onMouseEnter={ toggle } onMouseLeave={ toggle }>
-            <ContentContainer display={ isHover }>
+        <ProductContainer>
+            <ContentContainer>
                 <WineImg src={ data.image } />
                 <WineContent>
                     <WineText><b>{ data.collection }</b></WineText>
                     <WineText>{ data.name } { data.year }</WineText>
                 </WineContent>
             </ContentContainer>
-            <HoverElementContainer display={ isHover }>
-                <HoverText>View</HoverText>
+            <HoverElementContainer>
+                <HoverContent>
+                    <HoverIcon />
+                    <HoverText>View</HoverText>
+                </HoverContent>
             </HoverElementContainer>
         </ProductContainer>
     )

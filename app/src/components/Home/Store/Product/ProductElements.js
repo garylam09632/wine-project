@@ -1,10 +1,10 @@
 import styled from 'styled-components';
+import { BiUpArrowCircle } from 'react-icons/bi';
 
 export const ProductContainer = styled.div`
     width: 20%;
     background-color: #d6d4d5;
-    height: 100%;
-    display: flex;
+    height: 100%;  
     transition: 0.2s ease-in-out;
     cursor: pointer;
     position: relative;
@@ -41,11 +41,15 @@ export const ProductContainer = styled.div`
 export const ContentContainer = styled.div`
     width: 100%;
     height: 100%;
-    display: flex;
-    visibility: ${ props => props.display ? "hidden" : "visible" };
     justify-content: center;
+    display: flex;
     align-items: center;
     flex-flow: row wrap;
+    transition: 0.5s ease-in-out;
+
+    ${ProductContainer}:hover & {
+        display: none;
+    }
 `;
 
 export const WineImg = styled.img`
@@ -70,10 +74,50 @@ export const WineText = styled.p`
 `;
 
 export const HoverElementContainer = styled.div`
-    display: ${ props => props.display ? "block" : "none" };
-    visibility: ${ props => props.display ? "visible" : "hidden" };
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;  
+    flex-flow: none;
+
+    ${ProductContainer}:hover & {
+        display: flex;
+        flex-flow: row wrap;
+    }
+`;
+
+export const HoverContent = styled.div`
+    display: block;
+    height: auto;
+    text-align: center;
+`;
+
+export const HoverIcon = styled(BiUpArrowCircle)`
+    font-size: 8vw;
+
+    ${HoverElementContainer}:hover & {
+        transform: rotate(90deg);
+        transition: 0.3s ease-in-out;
+    }
+
+    @media screen and (max-width: 1000px) {
+        font-size: 110px;
+    }
 `;
 
 export const HoverText = styled.p`
+    font-size: 1.5vw;
+    opacity: 0;
+    font-family: 'Encode Sans SC', sans-serif;
 
+    ${HoverElementContainer}:hover & {
+        opacity: 1;
+        font-weight: bold;
+        transition: 0.4s ease-in-out;
+    }
+
+    @media screen and (max-width: 1000px) {
+        font-size: 20px;
+    }
 `;
