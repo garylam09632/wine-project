@@ -4,7 +4,6 @@ import About from '../components/Home/About';
 import Store from '../components/Home/Store';
 import News from '../components/Home/News';
 import Contact from '../components/Contact';
-import Footer from '../components/Footer';
 
 class Home extends Component {
 

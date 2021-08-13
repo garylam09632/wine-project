@@ -6,6 +6,7 @@ import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Store from './pages/Store';
+import News from './pages/News';
 
 class App extends Component {
 
@@ -24,9 +25,7 @@ class App extends Component {
                                     document.documentElement.scrollTop : document.body.scrollTop;
             // console.log(scrollTop + ", " + window.innerHeight);
             var containers = document.getElementsByClassName("hideMe");
-            var i = 0;
             for (var container of containers) {
-                console.log(scrollTop);
                 // var supportPageOffset = window.pageXOffset !== undefined;
                 // var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
                 // var scrollTop = supportPageOffset ? window.pageYOffset : isCSS1Compat ? 
@@ -34,7 +33,6 @@ class App extends Component {
 
                 let eTop = container.getBoundingClientRect().top + scrollTop;
                 let viewportBottom = scrollTop + window.innerHeight;
-                console.log(i + ". " + eTop + ", " + viewportBottom)
                 
                 /* If the object is completely visible in the window, fade it it */
                 if(viewportBottom > eTop + 150){
@@ -43,8 +41,6 @@ class App extends Component {
                         fill: 'forwards'
                     });
                 }
-
-                i++;
             }
         });
 	}
@@ -61,6 +57,9 @@ class App extends Component {
 					<Navbar toggle={this.toggle} />
 
 					<Switch>
+                        <Route path="/news">
+                            <News fadeInFunction={ this.elementFadeIn } />
+                        </Route>
 						<Route path="/store">
 							<Store fadeInFunction={ this.elementFadeIn } />
 						</Route>

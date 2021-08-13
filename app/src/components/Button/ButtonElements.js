@@ -71,4 +71,9 @@ export const Btn = styled(Link)`
         font-size: 2vw;
         height: 19px;
     }
+
+    @media screen and (max-width: 768px) {
+        font-size: 3vw;
+        height: 19px;
+    }
 `;

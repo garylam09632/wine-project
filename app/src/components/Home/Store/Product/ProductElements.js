@@ -2,50 +2,40 @@ import styled from 'styled-components';
 import { BiUpArrowCircle } from 'react-icons/bi';
 
 export const ProductContainer = styled.div`
-    width: 20%;
-    background-color: #d6d4d5;
-    height: 100%;  
-    transition: 0.2s ease-in-out;
+    width: 375px;
+    height: 500px;
+    background-color: #d6d4d5;  
     cursor: pointer;
     position: relative;
+    transition: 0.2s ease-in-out;
 
     &:hover {
         box-shadow: 1px 5px 10px #555859;
         transform: translate(-2px, -2px);
     }
 
-    @media screen and (max-width: 1500px) {
-        height: 80%;
-    }
-
-    @media screen and (max-width: 1300px) {
-        height: 70%;
-    }
-
-    @media screen and (max-width: 1100px) {
-        height: 60%;
-    }
-
-    @media screen and (max-width: 1000px) {
-        width: 100%;
-        height: 375px;
+    @media screen and (max-width: 1250px) {
         margin-bottom: 25px;
     }
 
+    @media screen and (max-width: 600px) {
+        transition: none;
+    }
+
     @media screen and (max-width: 500px) {
-        height: 325px;
-        padding-bottom: 10px;
+        width: 300px;
+        height: 425px;
     }
 `;
 
 export const ContentContainer = styled.div`
-    width: 100%;
-    height: 100%;
+    width: inherit;
+    height: inherit;
     justify-content: center;
     display: flex;
     align-items: center;
     flex-flow: row wrap;
-    transition: 0.5s ease-in-out;
+    transition: inherit;
 
     ${ProductContainer}:hover & {
         display: none;
@@ -54,8 +44,13 @@ export const ContentContainer = styled.div`
 
 export const WineImg = styled.img`
     padding-top: 10px;
-    width: 65%;
-    height: 75%;
+    width: 273px;
+    height: 375px;
+
+    @media screen and (max-width: 500px) {
+        width: 219px;
+        height: 300px;
+    }
 `;
 
 export const WineContent = styled.p`
@@ -65,7 +60,11 @@ export const WineContent = styled.p`
     display: block;
     font-family: 'Encode Sans SC', sans-serif;
     text-align: center;
-    font-size: 1vw;
+    font-size: 18px;
+
+    @media screen and (max-width: 500px) {
+        font-size: 16px;
+    }
 `;
 
 export const WineText = styled.p`
@@ -74,8 +73,8 @@ export const WineText = styled.p`
 `;
 
 export const HoverElementContainer = styled.div`
-    width: 100%;
-    height: 100%;
+    width: inherit;
+    height: inherit;
     display: none;
     justify-content: center;
     align-items: center;  
@@ -94,7 +93,7 @@ export const HoverContent = styled.div`
 `;
 
 export const HoverIcon = styled(BiUpArrowCircle)`
-    font-size: 8vw;
+    font-size: 125px;
 
     ${HoverElementContainer}:hover & {
         transform: rotate(90deg);
@@ -107,7 +106,7 @@ export const HoverIcon = styled(BiUpArrowCircle)`
 `;
 
 export const HoverText = styled.p`
-    font-size: 1.5vw;
+    font-size: 25px;
     opacity: 0;
     font-family: 'Encode Sans SC', sans-serif;
 

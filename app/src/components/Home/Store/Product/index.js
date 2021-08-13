@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react';
+import { useHistory } from 'react-router-dom';
 import {
     ProductContainer,
     ContentContainer,
@@ -13,8 +14,15 @@ import {
 
 const Product = ({ data }) => {
 
+    const history = useHistory();
+
+    const showDetail = () => {
+        history.push("/store?id=" + data.id);
+        window.location.reload();
+    }
+
     return (
-        <ProductContainer>
+        <ProductContainer onClick={ showDetail }>
             <ContentContainer>
                 <WineImg src={ data.image } />
                 <WineContent>

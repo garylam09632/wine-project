@@ -16,9 +16,7 @@ class Input extends Component {
         }
     }
 
-    onLabelClick = (e) => {
-        const target = e.target;
-
+    onLabelClick = () => {
         this.setState({ height: "100%", display: "block" });
     }
 

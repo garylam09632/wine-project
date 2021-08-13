@@ -11,7 +11,7 @@ export const StoreContainer = styled.div`
     flex-wrap: wrap;
     flex-direction: row;
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1250px) {
         height: auto;
         padding-bottom: 50px;
         padding-top: 30px;

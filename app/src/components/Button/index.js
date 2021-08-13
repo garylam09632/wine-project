@@ -3,7 +3,7 @@ import { BtnWrapper, Btn } from './ButtonElements'
 
 const Button = ({ text, to, hoverColor }) => {
 
-    if (hoverColor == undefined) {
+    if (hoverColor === undefined) {
         hoverColor = "#8B9192";
     }
 

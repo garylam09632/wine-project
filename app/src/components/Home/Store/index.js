@@ -13,6 +13,7 @@ import Button from '../../Button'
 const Store = () => {
 
     const p1 = {
+        id: 1,
         name: "Eagle Eye",
         year: 2021,
         collection: "The Flying Horseman",
@@ -20,6 +21,7 @@ const Store = () => {
     }
 
     const p2 = {
+        id: 2,
         name: "The Wanderer",
         year: 2021,
         collection: "The Flying Horseman",
@@ -27,11 +29,13 @@ const Store = () => {
     }
 
     const p3 = {
+        id: 3,
         name: "Terra Firma",
         year: 2021,
         collection: "The Flying Horseman",
         image: product_5
     }
+
 
     return (
         <StoreContainer>
