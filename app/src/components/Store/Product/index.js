@@ -1,5 +1,4 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 import {
     ProductContainer,
     ContentContainer,
@@ -14,15 +13,12 @@ import {
 
 const Product = ({ data }) => {
 
-    const history = useHistory();
+    window.scrollTo(1, 1);
 
-    const showDetail = () => {
-        history.push("/store?id=" + data.id);
-        window.location.reload();
-    }
+    const wineName = data.name.replace(" ", "-");
 
     return (
-        <ProductContainer onClick={ showDetail }>
+        <ProductContainer className="hideMe" to={ "/store/" + wineName }>
             <ContentContainer>
                 <WineImg src={ data.image } />
                 <WineContent>

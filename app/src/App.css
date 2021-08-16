@@ -1,3 +1,7 @@
+html * {
+  	z-index: 2;
+}
+
 .hideMe {
-  opacity: 0;
+  	opacity: 0;
 }

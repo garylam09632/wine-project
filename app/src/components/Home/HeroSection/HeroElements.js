@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
 const fadeIn = keyframes`
-    0% {opacity: 0.1;}
+    0% {opacity: 0.4;}
     30% {opacity: 1;}
     96% {opacity: 1;}
     100% {opacity: 0.6;}

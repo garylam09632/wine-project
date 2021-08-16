@@ -1,5 +1,4 @@
 import React from 'react';
-import wine from '../../images/wine.jpg';
 import {
     SingleNewsContainer,
     SingleNewsBgImg,
@@ -9,21 +8,20 @@ import {
     SingleNewsDescription
 } from './NewsElements';
 
-const SingleNews = ({ data }) => {
+export const SingleNews = ({ data }) => {
+
+    window.scrollTo(1, 1);
+
+    const newsTitle = data.title.replace(/ /g, "-");
+
     return (
-        <SingleNewsContainer backgroundImage={ wine }>
-            {/* <SingleNewsBgImg src={ nene1 } /> */}
+        <SingleNewsContainer className="hideMe" to={ "/news/" + newsTitle }>
+            <SingleNewsBgImg src={ data.image } />
             <SingleNewsCotentContainer>
-                <SingleNewsTitle>SOME TITLE</SingleNewsTitle>
-                <SingleNewsDescription>
-                    Mauris eros orci, blandit a porta eu, sagittis ac nulla. 
-                    Vivamus aliquet urna ac erat aliquam, nec finibus felis viverra. 
-                    Phasellus euismod dui in sapien mollis, quis laoreet enim tempor. 
-                </SingleNewsDescription>
-                <SingleNewsDate>06 DEC 2021</SingleNewsDate>
+                <SingleNewsTitle>{ data.title }</SingleNewsTitle>
+                <SingleNewsDescription>{ data.shortDescription } (Click to view more)</SingleNewsDescription>
+                <SingleNewsDate>{ data.date }</SingleNewsDate>
             </SingleNewsCotentContainer>
         </SingleNewsContainer>
     )
 }
-
-export default SingleNews

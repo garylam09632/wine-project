@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
-import product_1 from '../../images/product_01.jpg';
-import product_2 from '../../images/product_02.jpg';
-import product_5 from '../../images/product_sample.jpg';
 import { 
     StoreContainer, 
     StoreTitle, 
     WineContainer,
-    BreadcrumbsContainer,
-    Breadcrumb,
     ProductContentContainer,
     ProductImg,
     ProductContentRight,
@@ -18,77 +13,80 @@ import {
     ProductDescription,
     ShoppingButton
 } from './StoreElements';
+import Breadcrumb  from '../Breadcrumb';
 import Product from './Product/index';
 
-class Store extends Component {
+export class Store extends Component {
+
+    constructor(props) {
+        super(props);
+    }
 
     componentDidMount() {
         window.scrollTo(0, 0);
     }
 
     render() {
-        
-        let url = window.location.href;
-        // Show all
-        if (url.split('=').length === 1) {
-            const p1 = {
-                id: 1,
-                name: "Eagle Eye",
-                year: 2021,
-                collection: "The Flying Horseman",
-                image: product_1
-            }
-        
-            const p2 = {
-                id: 2,
-                name: "The Wanderer",
-                year: 2021,
-                collection: "The Flying Horseman",
-                image: product_2
-            }
-        
-            const p3 = {
-                id: 3,
-                name: "Terra Firma",
-                year: 2021,
-                collection: "The Flying Horseman",
-                image: product_5
-            }
+        const wines = this.props.wines.map((wine) => 
+            <Product data={ wine } />
+        )
+
+        window.scrollTo(1, 0)
+        return (
+            <StoreContainer>
+                <StoreTitle>OUR WINES</StoreTitle>
+                <WineContainer>
+                    { wines }
+                </WineContainer>
+            </StoreContainer>
+        )
+    }
+}
+
+
+export class SingleProduct extends Component {
     
-            return (
-                <StoreContainer>
-                    <StoreTitle>OUR WINES</StoreTitle>
-                    <WineContainer>
-                        <Product data={p1} />
-                        <Product data={p2} />
-                        <Product data={p3} />
-                        <Product data={p1} />
-                        <Product data={p2} />
-                        <Product data={p3} />
-                    </WineContainer>
-                </StoreContainer>
-            )
+    constructor(props) {
+        super(props);
+        this.state = {
+            wine: undefined,
+            wineHasFound: false
         }
-        // Show one
-        else {
+    }
+
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
+    render() {
+
+        var wine = undefined;
+        var wineHasFound = false;
+
+        const url = window.location.href.split("/")
+        const name = url[url.length - 1].replace("-", " ");
+        for (var i=0; i<this.props.wines.length; i++) {
+            let e = this.props.wines[i];
+            if (e.name == name) {
+                wine = e;
+                wineHasFound = true;
+            }
+        }
+        if (wineHasFound) {
+            window.scrollTo(1, 1);
             return (
                 <StoreContainer>
-                    <BreadcrumbsContainer>
-                        <Breadcrumb>OUR WINES</Breadcrumb>
-                    </BreadcrumbsContainer>
-                    <ProductContentContainer>
+                    <Breadcrumb to="/store" text="OUR WINES" />
+                    <ProductContentContainer className="hideMe">
                         <ProductContentLeft>
-                            <ProductImg src={ product_5 }/>
+                            <ProductImg src={ wine.image }/>
                         </ProductContentLeft>
                         <ProductContentRight>
                             <ProductDetailsContainer>
-                                <ProductCollection>The Flying Horseman</ProductCollection>
-                                <ProductName>Eagle Eye 2021</ProductName>
+                                <ProductCollection>{ wine.collection }</ProductCollection>
+                                <ProductName>{ wine.name }</ProductName>
                                 <ProductDescription>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in volutpat leo, in suscipit sem. 
-                                    Etiam sed efficitur nisi. Mauris a eros maximus est iaculis convallis. Mauris eleifend tincidunt arcu, 
-                                    eget pulvinar arcu hendrerit a. Sed tempor a sem et hendrerit. In sit amet tortor auctor, ultrices turpis ac, 
-                                    consequat mi. Praesent ac mollis nunc.
+                                    { wine.description }
                                 </ProductDescription>
                                 <ShoppingButton>Buy Now</ShoppingButton>
                             </ProductDetailsContainer>
@@ -97,9 +95,10 @@ class Store extends Component {
                 </StoreContainer>
             )
         }
-
-        
+        else {
+            return (
+                <h1>WINE NOT FOUND</h1>
+            )
+        }
     }
 }
-
-export default Store

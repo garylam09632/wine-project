@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const StoreContainer = styled.div`
     display: flex;
@@ -20,7 +21,6 @@ export const StoreTitle = styled.p`
     color: #fff;
     font-family: 'Encode Sans SC', sans-serif; 
     font-size: 60px;
-    font-weight: bold;
     transition: all 0.2s ease-in-out;
 
     @media screen and (max-width: 768px) {
@@ -48,53 +48,18 @@ export const WineContainer = styled.div`
     }
 `;
 
-// Components to show a single product
-export const BreadcrumbsContainer = styled.div`
-    display: flex;
-    height: auto;
-    width: 100%;
-    padding-left: 15%; 
-    margin-bottom: 110px;
-
-    @media screen and (max-width: 1400px) {
-        padding-left: 10%;
-    }
-
-    @media screen and (max-width: 1000px) {
-        padding-left: 15%; 
-        margin-bottom: 60px;
-    }
-`;
-
-export const Breadcrumb = styled.a`
-    font-size: 17px;
-    font-family: 'Encode Sans SC', sans-serif; 
-    text-decoration: none;
-    color: #fff;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-
-    &::before {
-        content: '<';
-        font-weight: bold;
-        margin-right: 10px;
-        color: #fff;
-    }
-    
-    &:hover, &:hover::before {
-        color: #8B9192;
-    }
-`;
-
+// Components to show a single product s
 export const ProductContentContainer = styled.div`
     display: flex;
     align-items: top;
     height: 600px;
     width: auto;
+    margin-top: 110px;
 
     @media screen and (max-width: 1000px) {
         height: auto;
         flex-flow: row wrap;
+        margin-top: 60px;
     }
 `;
 

@@ -30,6 +30,18 @@ export const ContactSectionText = styled.p`
     width: 70%;
     color: #fff;
     font-family: "Josefin Sans";
+
+    @media screen and (max-width: 1200px) {
+        font-size: 1.5vw;
+    }
+
+    @media screen and (max-width: 1000px) {
+        font-size: 17px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 14px;
+    }
 `;
 
 export const ContactForm = styled(Form)`

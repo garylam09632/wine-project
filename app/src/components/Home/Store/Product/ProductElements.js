@@ -1,13 +1,16 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { BiUpArrowCircle } from 'react-icons/bi';
 
-export const ProductContainer = styled.div`
+export const ProductContainer = styled(Link)`
     width: 375px;
     height: 500px;
     background-color: #d6d4d5;  
     cursor: pointer;
     position: relative;
     transition: 0.2s ease-in-out;
+    text-decoration: none;
+    color: #000 !important;
 
     &:hover {
         box-shadow: 1px 5px 10px #555859;

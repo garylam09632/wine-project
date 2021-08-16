@@ -12,6 +12,7 @@ export const FooterContainer = styled.footer`
     color: #fff;
     flex-flow: row wrap;
     padding-top: 40px;
+    position: relative;
 
     @media screen and (max-width: 768px) {
         font-size: 12px;

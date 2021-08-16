@@ -57,14 +57,14 @@ class App extends Component {
 					<Navbar toggle={this.toggle} />
 
 					<Switch>
+                        <Route exact path="/">
+							<Home fadeInFunction={ this.elementFadeIn } />
+						</Route>
                         <Route path="/news">
                             <News fadeInFunction={ this.elementFadeIn } />
                         </Route>
 						<Route path="/store">
 							<Store fadeInFunction={ this.elementFadeIn } />
-						</Route>
-						<Route path="/">
-							<Home fadeInFunction={ this.elementFadeIn } />
 						</Route>
 					</Switch>
 					<Footer />
