@@ -1,10 +1,15 @@
 import React from 'react'
-import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai'
+import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai';
+import { data } from '../../data/footer.json';
 import {
     FooterContainer,
-    AddressContainer,
-    ContactInfoContainer,
-    FooterText
+    Container,
+    InfoContainer,
+    InfoElementContainer,
+    InfoElementTitle,
+    InfoElementText,
+    MenuLink,
+    Copyright
 } from './FooterElements'
 
 const Footer = () => {
@@ -17,17 +22,36 @@ const Footer = () => {
 
     return (
         <FooterContainer>
-            <AddressContainer>
-                <FooterText>Street No, Street</FooterText>
-                <FooterText>Suburb</FooterText>
-                <FooterText>State, Postcode</FooterText>
-                <FooterText>Australia</FooterText>
-            </AddressContainer>
-            <ContactInfoContainer>
-                <FooterText><AiOutlineMail style={iconStyle} /> xxxxxxxxx@gmail.com</FooterText>
-                <FooterText><AiOutlinePhone style={iconStyle} /> (+61) 00 0000 0000</FooterText>
-            </ContactInfoContainer>
-            <FooterText>&copy; 2021 - Company</FooterText>
+            <Container>
+                <InfoContainer>
+                    <InfoElementContainer>
+                        <InfoElementTitle>Menu</InfoElementTitle>
+                        <InfoElementText><MenuLink to="/">Home</MenuLink></InfoElementText>
+                        <InfoElementText><MenuLink to="/about">About</MenuLink></InfoElementText>
+                        <InfoElementText><MenuLink to="/store">Store</MenuLink></InfoElementText>
+                        <InfoElementText><MenuLink to="/news">News</MenuLink></InfoElementText>
+                        <InfoElementText><MenuLink to="/contact">Contact</MenuLink></InfoElementText>
+                    </InfoElementContainer>
+                    <InfoElementContainer>
+                        <InfoElementTitle>Contact</InfoElementTitle>
+                        <InfoElementText>{ data.contact.streetNo } { data.contact.street }</InfoElementText>
+                        <InfoElementText>{ data.contact.suburb }</InfoElementText>
+                        <InfoElementText>{ data.contact.state } { data.contact.postcode }</InfoElementText>
+                        <InfoElementText>{ data.contact.country }</InfoElementText>
+                        <InfoElementText>xxxxxxxxx@gmail.com</InfoElementText>
+                        <InfoElementText>(+61) 00 0000 0000</InfoElementText>
+                    </InfoElementContainer>
+                    <InfoElementContainer>
+                        <InfoElementTitle>Social</InfoElementTitle>
+                        <InfoElementText></InfoElementText>
+                    </InfoElementContainer>
+                    <InfoElementContainer>
+                        <InfoElementTitle>NANGKITA Vineyard</InfoElementTitle>
+                        <InfoElementText></InfoElementText>
+                    </InfoElementContainer>
+                </InfoContainer>
+            </Container>
+            <Copyright>&copy; 2021 - { data.company.name }</Copyright>
         </FooterContainer>
     )
 }

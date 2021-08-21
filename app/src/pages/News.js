@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom';
 import nene from '../images/nene-01.jpg';
-import nene2 from '../images/nene-02.jpg';
+import nene2 from '../images/nene-03.jpg';
 import wine from '../images/wine.jpg';
-import Contact from '../components/Contact';
 import { News as NewsSection, SingleNews } from '../components/News';
 
 class News extends Component {
@@ -79,8 +78,6 @@ class News extends Component {
                         <SingleNews news={ this.state.news } />
                     </Route>
                 </Switch>
-
-                <Contact />
             </>
         )
     }

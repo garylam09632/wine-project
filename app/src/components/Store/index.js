@@ -11,7 +11,8 @@ import {
     ProductCollection,
     ProductName, 
     ProductDescription,
-    ShoppingButton
+    ShoppingButton,
+    Line
 } from './StoreElements';
 import Breadcrumb  from '../Breadcrumb';
 import Product from './Product/index';
@@ -35,6 +36,7 @@ export class Store extends Component {
         return (
             <StoreContainer>
                 <StoreTitle>OUR WINES</StoreTitle>
+                <Line />
                 <WineContainer>
                     { wines }
                 </WineContainer>

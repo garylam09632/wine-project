@@ -14,8 +14,8 @@ export const ProductContainer = styled(Link)`
     color: #000 !important;
 
     &:hover {
-        box-shadow: 1px 5px 10px #555859;
-        transform: translate(-2px, -2px);
+        box-shadow: 10px 5px 10px #555859;
+        transform: translate(-5px, -5px);
     }
 
     @media screen and (max-width: 1000px) {

@@ -3,7 +3,6 @@ import HeroSection from '../components/Home/HeroSection';
 import About from '../components/Home/About';
 import Store from '../components/Home/Store';
 import News from '../components/Home/News';
-import Contact from '../components/Contact';
 
 class Home extends Component {
 
@@ -19,7 +18,7 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        window.scrollTo(0, 0);
+        window.scrollTo(1, 1);
         this.props.fadeInFunction();
     }
 
@@ -30,7 +29,6 @@ class Home extends Component {
                 <About />
                 <Store />
                 <News />
-                <Contact />
             </>
         )
     }

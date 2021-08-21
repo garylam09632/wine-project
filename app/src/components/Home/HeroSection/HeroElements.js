@@ -36,21 +36,26 @@ export const HeroBg = styled.div`
     width: 100%;
     height: 100%;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: #000;
 `;
 
 export const ImageBg = styled.img`
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
     border: none;
+    object-fit: cover;
     background: #232a34;
     animation: ${fadeIn} ease 10s infinite;
+    filter: brightness(0.6);
 `;
 
 export const HeroContent = styled.div`
     z-index: 3;
     max-width: 1200px;
+    color: #fff;
+    font-weight: bold;
     display: flex;
     align-items: center;
     position: absolute;
@@ -60,24 +65,22 @@ export const HeroContent = styled.div`
 `;
 
 export const HeroH1 = styled.h1`
-    color: #fff;
-    font-size: 60px;
+    font-size: 80px;
     text-align: center;
     transition: 0.2s ease-in-out;
     font-family: 'Cinzel', serif;
 
     @media screen and (max-width: 768px) {
-        font-size: 40px;
+        font-size: 60px;
     }
 
     @media screen and (max-width: 480px) {
-        font-size: 32px;
+        font-size: 40px;
     }
 `;
 
 export const HeroP = styled.p`
     margin-top: 24px;
-    color: #fff;
     font-size: 30px;
     text-align: center;
     max-width: 600px;

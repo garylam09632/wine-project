@@ -4,7 +4,6 @@ import { Store as StoreSection, SingleProduct } from '../components/Store';
 import product_1 from '../images/product_01.jpg';
 import product_2 from '../images/product_02.jpg';
 import product_5 from '../images/product_sample.jpg';
-import Contact from '../components/Contact';
 
 class Store extends Component {
     
@@ -93,7 +92,6 @@ class Store extends Component {
                         <SingleProduct wines={ this.state.wines } />
                     </Route>
                 </Switch>
-                <Contact />
             </>
         )
     }

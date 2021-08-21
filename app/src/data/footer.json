@@ -1,0 +1,17 @@
+{
+    "data": {
+        "contact": {
+            "streetNo": "767",
+            "street": "Nangkita Road",
+            "suburb": "Nangkita",
+            "state": "SA",
+            "postcode": "5210",
+            "country": "Australia",
+            "email": "xxxxxxxxx@gmail.com",
+            "phoneNo": "00 0000 0000"
+        },
+        "company": {
+            "name": "Nangkita Vineyard"
+        }
+    }
+}

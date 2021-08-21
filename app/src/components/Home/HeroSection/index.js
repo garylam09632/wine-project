@@ -1,6 +1,6 @@
 import { React, Component } from 'react';
-import hill from '../../../images/adelaide_hills.jpg';
-import hill2 from '../../../images/adelaide_hills_2.jpg';
+import winery1 from '../../../images/winery_01.jpg';
+import winery3 from '../../../images/winery_03.jpg';
 import { 
     HeroContainer, 
     HeroBg, 
@@ -17,8 +17,8 @@ class HeroSection extends Component {
         this.state = {
             currentImage: 0,
             images: [
-                hill,
-                hill2
+                winery1,
+                winery3
             ]
         }
     }

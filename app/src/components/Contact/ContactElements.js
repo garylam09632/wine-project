@@ -1,12 +1,21 @@
 import styled from 'styled-components'
 import { Form, Row } from 'react-bootstrap'
 
+export const ContactContainer = styled.div`
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Encode Sans SC', sans-serif; 
+`;
+
 export const ContactSectionContainer = styled.div`
     display: flex;
     justify-content: center;
     background-color: #5E5E5E;
     align-items: center;
-    height: 600px;
+    height: 800px;
     position: relative;
     padding: 0px;
     flex-flow: row wrap;

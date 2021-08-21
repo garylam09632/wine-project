@@ -5,8 +5,10 @@ import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import About from './pages/About';
 import Store from './pages/Store';
 import News from './pages/News';
+import Contact from './pages/Contact';
 
 class App extends Component {
 
@@ -60,12 +62,18 @@ class App extends Component {
                         <Route exact path="/">
 							<Home fadeInFunction={ this.elementFadeIn } />
 						</Route>
-                        <Route path="/news">
-                            <News fadeInFunction={ this.elementFadeIn } />
+                        <Route path="/about">
+                            <About fadeInFunction={ this.elementFadeIn } />
                         </Route>
 						<Route path="/store">
 							<Store fadeInFunction={ this.elementFadeIn } />
 						</Route>
+                        <Route path="/news">
+                            <News fadeInFunction={ this.elementFadeIn } />
+                        </Route>
+                        <Route path="/contact">
+                            <Contact fadeInFunction={ this.elementFadeIn } />
+                        </Route>
 					</Switch>
 					<Footer />
 				</div>

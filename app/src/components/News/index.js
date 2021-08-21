@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
     ContentContainer,
     PageTitle,
+    Line,
     NewsContainer,
     NewsContentContainer,
     NewsImageContainer,
@@ -9,7 +10,7 @@ import {
     NewsTitle,
     NewsDate,
     SmallTitle,
-    Line,
+    SingleNewsLine,
     Bar,
     NewsArticleContainer,
 } from './NewsElements';
@@ -44,6 +45,7 @@ export class News extends Component {
             return (
                 <ContentContainer>
                     <PageTitle>NEWS</PageTitle>
+                    <Line />
                     <NewsContainer>{ leftContainer }</NewsContainer>
                     <NewsContainer>{ rightContainer }</NewsContainer>
                 </ContentContainer>
@@ -53,6 +55,7 @@ export class News extends Component {
             return (
                 <ContentContainer>
                     <PageTitle>NEWS</PageTitle>
+                    <Line />
                     <NewsContainer>{ all }</NewsContainer>
                 </ContentContainer>
             )
@@ -61,6 +64,7 @@ export class News extends Component {
             return (
                 <ContentContainer>
                     <PageTitle>NEWS</PageTitle>
+                    <Line />
                     <NewsContainer>{ leftContainer }</NewsContainer>
                     <NewsContainer>{ rightContainer }</NewsContainer>
                 </ContentContainer>
@@ -129,9 +133,6 @@ export class SingleNews extends Component {
 
         // Defines the paragraph
         var paras = news.article.split("\n");
-        console.log(paras);
-        const x = paras[0].split["\b"];
-        console.log(paras[0].substr(paras[0].length - 1) == "\b");
         paras = paras.map((para) => {
                 if (para.substr(para.length - 1) == "\b") {
                     para = para.substr(0, para.length - 1);
@@ -146,12 +147,12 @@ export class SingleNews extends Component {
             window.scrollTo(1, 1);
             return (
                 <ContentContainer>
-                    <Bar id="bar" />
+                    <Bar id="bar" className="hideMe" />
                     <Breadcrumb to="/news" text="NEWS" />
-                    <NewsDate>{ news.date }</NewsDate>
-                    <NewsTitle>{ news.title }</NewsTitle>
-                    <Line />
-                    <NewsContentContainer id="news-content-container">
+                    <NewsDate className="hideMe">{ news.date }</NewsDate>
+                    <NewsTitle className="hideMe">{ news.title }</NewsTitle>
+                    <SingleNewsLine className="hideMe"/>
+                    <NewsContentContainer id="news-content-container" className="hideMe">
                         <NewsArticleContainer>{ paras }</NewsArticleContainer>
                         <NewsImageContainer>
                             <NewsImage src={ news.image }/>

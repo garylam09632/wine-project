@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 export const StoreContainer = styled.div`
     display: flex;
@@ -8,7 +7,7 @@ export const StoreContainer = styled.div`
     height: auto;
     width: 100%;
     padding: 75px 0px 50px 0px;
-    background: #242424;
+    background: #121212;
     flex-flow: row wrap;
     transition: 0.2s ease-in-out;
 
@@ -24,13 +23,25 @@ export const StoreTitle = styled.p`
     transition: all 0.2s ease-in-out;
 
     @media screen and (max-width: 768px) {
-        font-size: 42px;
+        font-size: 50px;
     }
 
-    @media screen and (max-width: 480px) {
-        font-size: 35px;
+    @media screen and (max-width: 400px) {
+        font-size: 42px;
     }
 `;
+
+export const Line = styled.div`
+    width: 100%;
+    height: 2px;
+    margin: 0px 42% 10px 42%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+
+    @media screen and (max-width: 768px) {
+        margin: 0px 25% 10px 25%;
+    }
+
+`; 
 
 export const WineContainer = styled.div`
     display: flex;
@@ -225,4 +236,4 @@ export const ShoppingButton = styled.a`
         padding: 18px 25px;
     }
 
-`;
+`; 

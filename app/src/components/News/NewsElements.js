@@ -37,7 +37,6 @@ export const ContentContainer = styled.div`
 export const PageTitle = styled.h1`
     font-size: 60px;
     text-align: center;
-    margin-bottom: 75px;
     width: 100%;
     transition: 0.2s ease-in-out;
 
@@ -49,6 +48,22 @@ export const PageTitle = styled.h1`
         font-size: 45px;
     }
 `;
+
+export const Line = styled.div`
+    width: 100%;
+    height: 2px;
+    margin: 10px 46% 50px 46%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+
+    @media screen and (max-width: 768px) {
+        margin: 10px 40% 50px 40%;
+    }
+
+    @media screen and (max-width: 350px) {
+        margin: 10px 30% 50px 30%;
+    }
+
+`; 
 
 export const NewsContainer = styled.div`
     display: flex; 
@@ -90,8 +105,8 @@ export const SingleNewsContainer = styled(Link)`
     color: #fff !important;
 
     &:hover {
-        box-shadow: 1px 5px 10px #555859;
-        transform: translate(-2px, -2px);
+        box-shadow: 4px 5px 10px #555859;
+        transform: translate(-3px, -3px);
     }
 `;
 
@@ -269,6 +284,8 @@ export const NewsTitle = styled.h1`
     color: #000;
     padding: 0px 10% 10px 10%;
     transition: 0.2s ease-in-out;
+    position: relative;
+    z-index: 3;
 
     @media screen and (max-width: 1183px) {
         width: 100%;
@@ -298,7 +315,7 @@ export const SmallTitle = styled.p`
     }
 `;
 
-export const Line = styled.div`
+export const SingleNewsLine = styled.div`
     width: 100%;
     height: 2px;
     margin: 25px 35% 75px 35%;
